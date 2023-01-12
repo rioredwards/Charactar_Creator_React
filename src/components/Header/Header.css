@@ -1,0 +1,14 @@
+header {
+  background-color: var(--bg_color_1);
+  color: var(--font_color_1);
+  box-shadow: var(--box_shadow_1);
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
