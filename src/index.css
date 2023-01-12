@@ -7,15 +7,16 @@
 }
 
 :root {
-  --bg_color_1: var(--dungeon_color_2);
-  --bg_color_2: var(--dungeon_color_3);
-  --bg_color_3: var(--terraria_color_4);
-  --fg_color_1: var(--terraria_color_2);
-  --fg_color_2: var(--dungeon_color_4);
-  --font_color_1: var(--text_color_1);
-  --font_color_2: var(--text_color_2);
-  --accent_color_1: var(--dungeon_color_1);
-  --accent_color_2: var(--zelda_color_3);
+  --bg_color_1: var(--dungeon_theme_color_2);
+  --bg_color_2: var(--dungeon_theme_color_3);
+  --bg_color_3: rgba(76, 136, 155, 0.166);
+  --fg_color_1: var(--terraria_theme_color_2);
+  --fg_color_2: var(--dungeon_theme_color_4);
+  --font_color_1: var(--text_theme_color_1);
+  --font_color_2: var(--text_theme_color_2);
+  --accent_color_1: var(--dungeon_theme_color_1);
+  --accent_color_2: var(--zelda_theme_color_3);
+  --action_color: rgb(170, 109, 198);
   --box_shadow_1: 6px 7px 9px -8px rgba(0, 0, 0, 0.75);
   --box_shadow_2: 5px 7px 9px -4px rgba(0, 0, 0, 0.94);
 }
@@ -27,6 +28,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg_color_2);
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--font_color_1);
+}
+
+p,
+label {
+  color: var(--font_color_2);
 }
 
 code {
