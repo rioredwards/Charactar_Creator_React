@@ -3,12 +3,16 @@ footer {
   position: fixed;
   transform: translateY(-1.4rem);
   top: 100vh;
+
   height: 1.4rem;
   width: 100%;
   padding: 0.2rem;
-  text-align: center;
-  font-size: 0.8rem;
 
-  background-color: var(--bg_color_1);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 0.7rem;
+
+  background-color: var(--bg_color_2);
   color: var(--font_color_2);
 }
