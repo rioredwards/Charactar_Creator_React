@@ -16,12 +16,5 @@ main {
   justify-items: center;
   align-content: center;
   align-items: center;
-}
-
-.TEMP-preview-container,
-.TEMP-editor-container {
-  /* border: 1px solid red; */
-  height: 80vh;
-  width: 40vw;
-  background-color: var(--bg_color_2);
+  column-gap: 2rem;
 }

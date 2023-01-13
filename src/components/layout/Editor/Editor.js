@@ -13,8 +13,8 @@ export default function Editor() {
         </div>
 
         <div className="form-control">
-          <label>Body</label>
-          <select name="body">
+          <label>Torso</label>
+          <select name="torso">
             <option value="TEMP-Option">TEMP-Option</option>
           </select>
         </div>

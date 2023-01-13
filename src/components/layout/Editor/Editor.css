@@ -2,9 +2,9 @@
   background-color: var(--bg_color_2);
   box-shadow: var(--box_shadow_1);
 
-  height: 100%;
-  width: 80%;
-  min-height: 26rem;
+  height: 80vh;
+  width: 40vw;
+  min-height: 32rem;
   min-width: 20rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -50,6 +50,7 @@ label {
 select,
 textarea,
 button {
+  background-color: rgb(246, 246, 246);
   padding: 0.2rem;
   border-color: #cccccc;
   border-style: solid;
@@ -70,5 +71,5 @@ select {
 button {
   background-color: var(--action_color);
   border: none;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
 }

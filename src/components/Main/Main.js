@@ -1,12 +1,13 @@
 import Editor from '../layout/Editor/Editor.js';
+import Preview from '../layout/Preview/Preview.js';
 import './Main.css';
 
 export default function Main() {
   return (
     <>
       <main>
-        <Editor className="TEMP-preview-container" />
-        <div className="TEMP-editor-container" />
+        <Editor />
+        <Preview />
       </main>
     </>
   );
