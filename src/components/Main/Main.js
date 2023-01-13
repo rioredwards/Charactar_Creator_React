@@ -5,11 +5,12 @@ import './Main.css';
 
 export default function Main() {
   const [head, setHead] = useState('hat_black');
+  const [torso, setTorso] = useState('hat_black');
   return (
     <>
       <main>
-        <Editor head={head} setHead={setHead} />
-        <Preview head={head} />
+        <Editor {...{ head, setHead, torso, setTorso }} />
+        <Preview head={head} torso={torso} />
       </main>
     </>
   );
