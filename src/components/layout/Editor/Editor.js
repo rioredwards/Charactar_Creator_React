@@ -1,11 +1,20 @@
+import { useState } from 'react';
 import './Editor.css';
 
-export default function Editor({ head, setHead, torso, setTorso, legs, setLegs }) {
-  const handleChange = (event) => {
-    console.log(`${event.target.name}: ${event.target.value}`);
-    event.target.name === 'head' && setHead(event.target.value);
-    event.target.name === 'torso' && setTorso(event.target.value);
-    event.target.name === 'legs' && setLegs(event.target.value);
+export default function Editor({ head, setHead, torso, setTorso, legs, setLegs, setCatchphrases }) {
+  const [inputValue, setInputValue] = useState('');
+  const handleChange = (e) => {
+    console.log(`In handleChange: ${e.target.name}: ${e.target.value}`);
+    e.target.name === 'head' && setHead(e.target.value);
+    e.target.name === 'torso' && setTorso(e.target.value);
+    e.target.name === 'legs' && setLegs(e.target.value);
+    e.target.name === 'catchPhraseInput' && setInputValue(e.target.value);
+  };
+  const handleClick = (e) => {
+    console.log(`In handleClick: ${e.target.name}: ${inputValue}`);
+    e.target.name === 'catchphraseSubmit' &&
+      setCatchphrases((currentState) => [...currentState, inputValue]);
+    setInputValue('');
   };
 
   return (
@@ -62,8 +71,10 @@ export default function Editor({ head, setHead, torso, setTorso, legs, setLegs }
 
         <div className="form-control">
           <label>Catch Phrase</label>
-          <textarea name="catchPhrase" />
-          <button>Add</button>
+          <input value={inputValue} onChange={handleChange} type="text" name="catchPhraseInput" />
+          <button onClick={handleClick} name="catchphraseSubmit">
+            Submit
+          </button>
         </div>
       </div>
       <p>TEMP number of changes for: </p>
