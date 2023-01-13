@@ -3,15 +3,29 @@ import './Editor.css';
 
 export default function Editor({ head, setHead, torso, setTorso, legs, setLegs, setCatchphrases }) {
   const [inputValue, setInputValue] = useState('');
+  const [changesCounter, setChangesCounter] = useState({
+    head: 0,
+    torso: 0,
+    legs: 0,
+    catchphrases: 0,
+  });
+
+  // Handle all changes
   const handleChange = (e) => {
-    console.log(`In handleChange: ${e.target.name}: ${e.target.value}`);
-    e.target.name === 'head' && setHead(e.target.value);
-    e.target.name === 'torso' && setTorso(e.target.value);
-    e.target.name === 'legs' && setLegs(e.target.value);
-    e.target.name === 'catchPhraseInput' && setInputValue(e.target.value);
+    const targetVar = e.target.name;
+
+    targetVar === 'head' && setHead(e.target.value);
+    targetVar === 'torso' && setTorso(e.target.value);
+    targetVar === 'legs' && setLegs(e.target.value);
+    targetVar === 'catchPhraseInput' && setInputValue(e.target.value);
+
+    setChangesCounter((prevState) => ({
+      ...prevState,
+      [targetVar]: prevState[targetVar] + 1,
+    }));
   };
+
   const handleClick = (e) => {
-    console.log(`In handleClick: ${e.target.name}: ${inputValue}`);
     e.target.name === 'catchphraseSubmit' &&
       setCatchphrases((currentState) => [...currentState, inputValue]);
     setInputValue('');
@@ -77,7 +91,14 @@ export default function Editor({ head, setHead, torso, setTorso, legs, setLegs, 
           </button>
         </div>
       </div>
-      <p>TEMP number of changes for: </p>
+      <div className="num-changes-container">
+        <div className="catchPhrases-container">
+          <p>Changes in head: {changesCounter.head}</p>
+          <p>Changes in torso: {changesCounter.torso}</p>
+          <p>Changes in legs: {changesCounter.legs}</p>
+          <p>Changes in catchphrases: {changesCounter.catchphrases}</p>
+        </div>
+      </div>
     </div>
   );
 }
