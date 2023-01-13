@@ -24,4 +24,11 @@
   --terraria_theme_color_3: #190f26;
   --terraria_theme_color_4: #2a1a40;
   --terraria_theme_color_5: #2d2059;
+
+  /*  New zelda */
+  --zelda_theme: rgba(227, 203, 172, 1);
+  --zelda_theme: rgba(156, 153, 133, 1);
+  --zelda_theme: rgba(196, 109, 59, 1);
+  --zelda_theme: rgba(120, 136, 128, 1);
+  --zelda_theme: rgba(50, 70, 84, 1);
 }

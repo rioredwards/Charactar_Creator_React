@@ -48,7 +48,7 @@ label {
 }
 
 select,
-textarea,
+input,
 button {
   background-color: rgb(246, 246, 246);
   padding: 0.2rem;
@@ -59,7 +59,7 @@ button {
 }
 
 select:focus,
-textarea:focus {
+input:focus {
   outline: none;
 }
 

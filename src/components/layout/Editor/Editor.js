@@ -13,7 +13,6 @@ export default function Editor({ head, setHead, torso, setTorso, legs, setLegs, 
   // Handle all changes
   const handleChange = (e) => {
     const targetVar = e.target.name;
-
     targetVar === 'head' && setHead(e.target.value);
     targetVar === 'torso' && setTorso(e.target.value);
     targetVar === 'legs' && setLegs(e.target.value);
@@ -92,11 +91,21 @@ export default function Editor({ head, setHead, torso, setTorso, legs, setLegs, 
         </div>
       </div>
       <div className="num-changes-container">
-        <div className="catchPhrases-container">
-          <p>Changes in head: {changesCounter.head}</p>
-          <p>Changes in torso: {changesCounter.torso}</p>
-          <p>Changes in legs: {changesCounter.legs}</p>
-          <p>Changes in catchphrases: {changesCounter.catchphrases}</p>
+        <div>
+          <p>Changes in Head:</p>
+          <p>{changesCounter.head}</p>
+        </div>
+        <div>
+          <p>Changes in Torso:</p>
+          <p>{changesCounter.torso}</p>
+        </div>
+        <div>
+          <p>Changes in Legs:</p>
+          <p>{changesCounter.legs}</p>
+        </div>
+        <div>
+          <p>Changes in Catchphrases:</p>
+          <p>{changesCounter.catchphrases}</p>
         </div>
       </div>
     </div>
