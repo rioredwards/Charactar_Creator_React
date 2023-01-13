@@ -1,10 +1,11 @@
 import './Editor.css';
 
-export default function Editor({ head, setHead, torso, setTorso }) {
+export default function Editor({ head, setHead, torso, setTorso, legs, setLegs }) {
   const handleChange = (event) => {
     console.log(`${event.target.name}: ${event.target.value}`);
     event.target.name === 'head' && setHead(event.target.value);
     event.target.name === 'torso' && setTorso(event.target.value);
+    event.target.name === 'legs' && setLegs(event.target.value);
   };
 
   return (
@@ -44,8 +45,18 @@ export default function Editor({ head, setHead, torso, setTorso }) {
 
         <div className="form-control">
           <label>Legs</label>
-          <select name="legs">
-            <option value="TEMP-Option">TEMP-Option</option>
+          <select name="legs" value={legs} onChange={handleChange}>
+            <option value="pants_short_brown">pants_short_brown</option>
+            <option value="trouser_green">trouser_green</option>
+            <option value="skirt_green">skirt_green</option>
+            <option value="skirt_blue">skirt_blue</option>
+            <option value="pants_l_white">pants_l_white</option>
+            <option value="pants_blue">pants_blue</option>
+            <option value="pants_black">pants_black</option>
+            <option value="loincloth_red">loincloth_red</option>
+            <option value="leg_armor05">leg_armor05</option>
+            <option value="leg_armor01">leg_armor01</option>
+            <option value="leg_armor00">leg_armor00</option>
           </select>
         </div>
 
