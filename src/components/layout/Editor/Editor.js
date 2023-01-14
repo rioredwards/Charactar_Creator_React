@@ -28,6 +28,11 @@ export default function Editor({ head, setHead, torso, setTorso, legs, setLegs, 
     e.target.name === 'catchphraseSubmit' &&
       setCatchphrases((currentState) => [...currentState, inputValue]);
     setInputValue('');
+
+    setChangesCounter((prevState) => ({
+      ...prevState,
+      ['catchphrases']: prevState['catchphrases'] + 1,
+    }));
   };
 
   return (
