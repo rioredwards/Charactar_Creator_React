@@ -8,6 +8,7 @@ export default function Preview({ head, torso, legs, catchphrases }) {
         <div className="inner_char_container">
           <img className="head" src={`char_images/head/${head}.png`} />
           <img className="torso" src={`char_images/torso/${torso}.png`} />
+          <img className="body" src={`char_images/body/male.png`} />
           <img className="legs" src={`char_images/legs/${legs}.png`} />
         </div>
       </div>
