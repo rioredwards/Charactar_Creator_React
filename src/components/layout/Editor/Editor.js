@@ -39,7 +39,6 @@ export default function Editor({ head, setHead, torso, setTorso, legs, setLegs, 
           <select name="head" value={head} onChange={handleChange}>
             <option value="hat_black">hat_black</option>
             <option value="black_horn_1">black_horn_1</option>
-            <option value="blue_horn_2">blue_horn_2</option>
             <option value="clown_1">clown_1</option>
             <option value="cone_blue">cone_blue</option>
             <option value="crown_gold_1">crown_gold_1</option>
