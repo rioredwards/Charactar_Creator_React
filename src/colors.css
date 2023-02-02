@@ -1,0 +1,34 @@
+/* theme_Color Theme Swatches in Hex */
+:root {
+  /* Font-theme_Colors */
+  --text_theme_color_1: #dfdfdf;
+  --text_theme_color_2: #cbcbcb;
+
+  /* Dungeon-theme_Colors */
+  --dungeon_theme_color_1: #7e3a84;
+  --dungeon_theme_color_2: #0a170d;
+  --dungeon_theme_color_3: #1b2528;
+  --dungeon_theme_color_4: #357332;
+  --dungeon_theme_color_5: #82a6a0;
+
+  /* Zelda */
+  --zelda_theme_color_1: #494b4b;
+  --zelda_theme_color_2: #0e5135;
+  --zelda_theme_color_3: #0d9263;
+  --zelda_theme_color_4: #4aba91;
+  --zelda_theme_color_5: #d4ce46;
+
+  /* Terraria */
+  --terraria_theme_color_1: #025928;
+  --terraria_theme_color_2: #405b73;
+  --terraria_theme_color_3: #190f26;
+  --terraria_theme_color_4: #2a1a40;
+  --terraria_theme_color_5: #2d2059;
+
+  /*  New zelda */
+  --zelda_theme: rgba(227, 203, 172, 1);
+  --zelda_theme: rgba(156, 153, 133, 1);
+  --zelda_theme: rgba(196, 109, 59, 1);
+  --zelda_theme: rgba(120, 136, 128, 1);
+  --zelda_theme: rgba(50, 70, 84, 1);
+}
